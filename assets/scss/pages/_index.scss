@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+
+.bvn-misvis {
+    color: $dark-color;
+    padding: 20px;
+    text-align: justify;
+
+    &__bienvenida {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    &__img-hospital {
+        width: 400px;
+        border-radius: 10px;
+    }
+    &__texto {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    &__mis-vis {
+        display: flex;
+        gap: 30px;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+.servicios {
+    color: $dark-color;
+
+    &__serv-med {
+        display: flex;
+        gap: 20px;
+        text-align: justify;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+.test {
+    color: $dark-color;
+    padding-bottom: 20px;
+
+    &__testimonios {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+// Responsividad
+
+// Para pantallas pequeñas
+@media (max-width: $breakpoint-small) {
+    .bvn-misvis {
+        padding: 10px;
+
+        &__bienvenida {
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+        
+        &__img-hospital {
+            width: 100%;
+        }
+        &__mis-vis {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    .servicios__serv-med,
+    .test__testimonios {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px;
+    }
+    .servicios h2, .test h2 {
+        margin-left: 20px;
+    }
+}
+
+// Para pantallas medianas
+@media (max-width: $breakpoint-medium) {
+    .bvn-misvis__img-hospital {
+        width: 300px;
+    }
+    .bvn-misvis__mis-vis {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .servicios__serv-med,
+    .test__testimonios {
+        flex-direction: column;
+    }
+}
+
+// Para pantallas grandes
+@media (max-width: $breakpoint-large) {
+    .bvn-misvis__img-hospital {
+        width: 350px;
+    }
+}
